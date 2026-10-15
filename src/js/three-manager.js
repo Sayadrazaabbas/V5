@@ -369,4 +369,11 @@ class ThreeManager {
     }
 }
 
-export const threeManager = new ThreeManager();
+// WebGL is optional: some browsers, privacy settings, and low-power devices
+// may refuse to create a renderer. The rest of the site must still load.
+export let threeManager = null;
+try {
+    threeManager = new ThreeManager();
+} catch (error) {
+    console.warn('3D preloader disabled:', error);
+}
