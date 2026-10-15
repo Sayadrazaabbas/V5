@@ -4,3 +4,14 @@
 @media(max-width:600px){.shell{width:min(100% - 36px,1280px)}h2{font-size:clamp(2.15rem,9vw,3rem)}.hero{min-height:690px}.hero-layout{min-height:690px;padding:65px 0 100px}.hero h1{font-size:clamp(2.9rem,11vw,4.2rem)}.hero-art{top:190px;right:-220px}.hero-lead{font-size:1rem}.hero-support{font-size:.86rem}.hero-bottom{font-size:.58rem}.actions{flex-direction:column;align-items:stretch}.actions .button{width:100%}.eyebrow{font-size:.57rem;letter-spacing:.12em}.intro-columns,.business-grid,.market-grid,.why-grid,.interest-list,.partnership-list,.form-grid{grid-template-columns:1fr}.business-card{min-height:auto}.focus-strip{display:block}.focus-strip ul{margin-top:14px}.market-grid article{min-height:180px}.section-tail,.footer-bottom{display:block}.section-tail .text-link{margin-top:18px}.energy-visual{min-height:380px}.infra-image,.infra-image img{min-height:350px}.inquiry-form{padding:24px}.footer-main{grid-template-columns:1fr 1fr;gap:35px 25px;padding:60px 0}.footer-main>div:first-child,.footer-main>div:last-child{grid-column:1/-1}.footer-bottom span{display:block;margin-bottom:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:0s!important;animation-duration:0s!important}}
 @media(max-width:600px){.energy-visual{aspect-ratio:auto}}
+.market-disclaimer{max-width:780px;margin:28px 0 0;color:#a8bfc7;font-size:.79rem;line-height:1.65}
+.leadership-block{display:grid;grid-template-columns:.8fr 1.2fr;gap:8%;margin-top:70px;padding-top:42px;border-top:1px solid #c6d3d0}
+.leadership-block h3{font-size:clamp(1.6rem,2.6vw,2.6rem);margin:0}
+.leadership-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.leadership-grid strong,.leadership-grid span{display:block;font-family:Manrope,sans-serif}
+.leadership-grid strong{font-size:1rem}
+.leadership-grid span{color:#896942;font-size:.78rem;font-weight:700;margin:6px 0 14px}
+.leadership-grid p{font-size:.85rem;color:#5f6e74;margin:0}
+.contact-card a{color:#735323;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:800px){.leadership-block{grid-template-columns:1fr;gap:26px}}
+@media(max-width:600px){.leadership-grid{grid-template-columns:1fr}}

@@ -27,7 +27,7 @@ if (inquiryForm) {
 
     const data = new FormData(inquiryForm);
     const value = key => String(data.get(key) || '').trim();
-    const subject = `CBGIPL business inquiry: ${value('interest')} — ${value('inquiryType')}`;
+    const subject = `CBGIPL business enquiry: ${value('interest')} — ${value('inquiryType')}`;
     const body = [
       `Full name: ${value('fullName')}`,
       `Company / organization: ${value('company')}`,
@@ -35,7 +35,7 @@ if (inquiryForm) {
       `Phone number: ${value('phone')}`,
       `Country: ${value('country')}`,
       `Area of interest: ${value('interest')}`,
-      `Inquiry type: ${value('inquiryType')}`,
+      `Enquiry type: ${value('inquiryType')}`,
       '',
       'Product or project requirements:',
       value('requirements'),
@@ -45,9 +45,9 @@ if (inquiryForm) {
     ].join('\n');
 
     // GitHub Pages has no mail server. Open the visitor's mail app so they can
-    // review and send the inquiry themselves; never claim it was submitted.
+    // review and send the enquiry themselves; never claim it was submitted.
     const mailLink = `mailto:info@cbgipl.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    document.querySelector('#form-status').textContent = 'Your email application should open with the inquiry ready to review and send.';
+    document.querySelector('#form-status').textContent = 'Your email application should open with the enquiry ready to review and send.';
     window.location.href = mailLink;
   });
 }
