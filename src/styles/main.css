@@ -1737,6 +1737,25 @@ select {
   margin-top: 15px;
 }
 
+.banking-leader-card .leader-info p {
+  font-size: .75rem;
+  line-height: 1.35;
+}
+
+.banking-leader-card .leader-image img {
+  object-position: center 30%;
+}
+
+.banking-leader-card .leader-info,
+.banking-leader-card:hover .leader-info {
+  padding-top: 20px;
+}
+
+.banking-leader-card .leader-role {
+  font-size: .7rem;
+  letter-spacing: .5px;
+}
+
 /* Gold accent line at bottom */
 .leader-card::after {
   content: '';
