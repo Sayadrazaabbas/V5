@@ -167,4 +167,10 @@ class RoadmapManager {
     }
 }
 
-export const roadmapManager = new RoadmapManager();
+// Keep the page usable when WebGL is unavailable.
+export let roadmapManager = null;
+try {
+    roadmapManager = new RoadmapManager();
+} catch (error) {
+    console.warn('3D roadmap disabled:', error);
+}
