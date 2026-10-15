@@ -1,4 +1,4 @@
-import { projectStatusData } from '/src/data/project_status.js';
+import { projectStatusData } from '../data/project_status.js';
 /* ======================================================================
    CBGIPL — Main JavaScript
    Handles: Preloader, Navbar, Scroll Animations, Counters,
