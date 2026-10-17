@@ -11,6 +11,7 @@ import { roadmapManager } from './roadmap-manager';
 // Wait for DOM
 document.addEventListener('DOMContentLoaded', () => {
   initPreloader();
+  initHeroVideo();
   initNavbar();
   initScrollAnimations();
   initCounters();
@@ -29,6 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 });
+
+function initHeroVideo() {
+  const video = document.getElementById('heroVideo');
+  if (!video) return;
+
+  const playWhenReady = () => {
+    if (video.paused) video.play().catch(() => {});
+  };
+
+  video.addEventListener('canplay', playWhenReady);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) playWhenReady();
+  });
+  playWhenReady();
+}
 
 /* ── PRELOADER ── */
 function initPreloader() {

@@ -46,8 +46,9 @@ const args = [
   '-loop', '1', '-framerate', '24', '-t', '4', '-i', source('src/media/hero/global-trade.jpg'),
   '-filter_complex', filters,
   '-map', '[video]', '-map', '0:a:0',
-  '-t', '22', '-c:v', 'libx264', '-preset', 'medium', '-crf', '21',
-  '-pix_fmt', 'yuv420p', '-r', '24', '-c:a', 'aac', '-b:a', '128k',
+  '-t', '22', '-c:v', 'libx264', '-preset', 'slow', '-crf', '28',
+  '-s:v', '960x540', '-pix_fmt', 'yuv420p', '-r', '24',
+  '-c:a', 'aac', '-b:a', '96k',
   '-movflags', '+faststart', output,
 ];
 
