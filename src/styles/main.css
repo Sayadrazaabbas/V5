@@ -2932,4 +2932,12 @@ select {
   .roadmap-grid .roadmap-item { padding: 32px !important; }
   .roadmap-premium .section-desc { max-width: 100% !important; }
   .leadership-hierarchy > div:first-child .leader-card { width: 100% !important; }
+  #soundToggleBtn {
+    top: 130px;
+    bottom: auto !important;
+    right: 16px !important;
+    padding: 8px 12px !important;
+    font-size: .75rem !important;
+  }
+  #home .hero-scroll-indicator { display: none; }
 }
