@@ -1,16 +1,18 @@
 // Rebuild the V5 hero montage from the existing real-estate film and
 // corporate business profile imagery, synchronized with every spoken keyword,
 // enhanced energetic background music, bold tempo, and 200%+ volume.
-// Restructured order:
-// 1. Intro 3D Animation (CBG IPL — Carter Brown Global Infra Private Limited. Building the Foundations for the Future.)
-// 2. Powering Industries & Shaping a Sustainable Tomorrow (Newly generated modern eco-smart city & sustainable energy skyline)
-// 3. Oil & Gas (Newly generated modern deepwater drilling & LNG facility at sunset)
-// 4. Fertilizers & Chemicals (Newly generated agro-chemical production plant & green crop fields)
-// 5. Metals & Minerals (Newly generated high-tech metallurgy facility with steel coils & refined minerals)
-// 6. International Trading & Maritime Cargo Port
-// 7. Global Supply Chains (Newly generated intermodal routes: vessel, freight rail, logistics trucks, air cargo)
-// 8. Green & Renewable Energy
-// 9. Global Network & Opportunities Across The World (Grand Final Ending)
+// Restructured 10-scene order:
+// 0. Intro 3D Animation (CBG IPL — Carter Brown Global Infra Private Limited. Building the Foundations for the Future.)
+// 1. Powering Industries ("Powering industries.") -> powering-industries-new.jpg
+// 2. Connecting Nations ("Connecting nations.") -> connecting-nations-new.jpg
+// 3. Shaping a Sustainable Tomorrow ("Shaping a sustainable tomorrow.") -> sustainable-tomorrow.jpg
+// 4. Oil & Gas ("From oil and gas,") -> energy-new.jpg
+// 5. Fertilizers & Chemicals ("to chemicals and fertilizers,") -> fertilizers-new.jpg
+// 6. Metals & Minerals ("metals, and minerals —") -> metals-new.jpg
+// 7. Imports & Exports ("we bridge global markets through strategic sourcing, international trading, imports, and exports.") -> imports-exports-new.jpg
+// 8. Global Supply Chains ("Driving industrial growth. Strengthening global supply chains. Delivering opportunities beyond borders.") -> global-supply-chains.jpg
+// 9. Green & Renewable Energy ("Embracing green energy and renewable energy solutions...") -> green-energy.jpg
+// 10. Opportunities Across The World ("With a vision that transcends boundaries...") -> global-network.jpg
 //
 // Usage: node scripts/render-hero-profile.cjs [ffmpeg.exe] [output.mp4]
 const path = require('node:path');
@@ -38,36 +40,31 @@ function still(input, crop, label, title, name, bandOpacity, duration) {
     `setsar=1,format=yuv420p,${caption(label, title, bandOpacity)},fps=24,settb=1/24[${name}]`;
 }
 
-// Calibrated Scene Durations synchronized with energetic dialogs:
-// d0 (Intro 3D): 8.0s
-// d1 (Powering Industries & Shaping Sustainable Tomorrow): 6.5s
-// d2 (Oil & Gas): 2.4s
-// d3 (Fertilizers & Chemicals): 2.8s
-// d4 (Metals & Minerals): 2.6s
-// d5 (Imports & Exports): 6.4s
-// d6 (Global Supply Chains & Infrastructure): 8.0s
-// d7 (Green Energy): 7.9s
-// d8 (Grand Final Ending: Global Opportunities Across The World): 8.4s
-const d0 = 8.0;
-const d1 = 6.5;
-const d2 = 2.4;
-const d3 = 2.8;
-const d4 = 2.6;
-const d5 = 6.4;
-const d6 = 8.0;
-const d7 = 7.9;
-const d8 = 8.4;
-const trans = 0.35;
+// Scene Durations synchronized with exact split dialogue pieces:
+const d0 = 8.0;   // Intro 3D
+const d1 = 2.4;   // Powering industries (2.02s voice)
+const d2 = 2.3;   // Connecting nations (1.94s voice)
+const d3 = 2.8;   // Shaping a sustainable tomorrow (2.45s voice)
+const d4 = 2.4;   // Oil & Gas (2.11s voice)
+const d5 = 2.8;   // Fertilizers & Chemicals (2.50s voice)
+const d6 = 2.6;   // Metals & Minerals (2.33s voice)
+const d7 = 6.4;   // Imports & Exports (6.07s voice)
+const d8 = 8.0;   // Global Supply Chains (7.78s voice)
+const d9 = 7.9;   // Green Energy (7.63s voice)
+const d10 = 8.4;  // Opportunities Across The World (7.99s voice)
+const trans = 0.3;
 
-const off1 = d0 - trans;               // 7.65
-const off2 = off1 + d1 - trans;        // 13.80
-const off3 = off2 + d2 - trans;        // 15.85
-const off4 = off3 + d3 - trans;        // 18.30
-const off5 = off4 + d4 - trans;        // 20.55
-const off6 = off5 + d5 - trans;        // 26.60
-const off7 = off6 + d6 - trans;        // 34.25
-const off8 = off7 + d7 - trans;        // 41.80
-const totalDur = off8 + d8;            // 49.85s ~ 52.0s
+const off1 = d0 - trans;                 // 7.7
+const off2 = off1 + d1 - trans;          // 9.8
+const off3 = off2 + d2 - trans;          // 11.8
+const off4 = off3 + d3 - trans;          // 14.3
+const off5 = off4 + d4 - trans;          // 16.4
+const off6 = off5 + d5 - trans;          // 18.9
+const off7 = off6 + d6 - trans;          // 21.2
+const off8 = off7 + d7 - trans;          // 27.3
+const off9 = off8 + d8 - trans;          // 35.0
+const off10 = off9 + d9 - trans;         // 42.6
+const totalDur = off10 + d10;            // 50.7s ~ 52.4s
 
 const filters = [
   // Scene 0: Authentic 3D Architectural intro
@@ -76,31 +73,37 @@ const filters = [
     `drawtext=fontfile='${font}':text='Carter Brown Global Infra Private Limited':fontcolor=white:fontsize=22:x=(w-text_w)/2:y=408:enable='gte(t,3.5)',` +
     'settb=1/24[v0]',
   
-  // Scene 1: Powering Industries, Connecting Nations, Shaping a Sustainable Tomorrow
-  still(1, '', 'POWERING INDUSTRIES', 'SHAPING A SUSTAINABLE TOMORROW', 'v1', 0.85, d1),
-  
-  // Scene 2: Oil & Gas (Newly generated offshore platform & LNG facility)
-  still(2, '', 'ENERGY TRADE', 'OIL & GAS', 'v2', 0.85, d2),
-  
-  // Scene 3: Fertilizers & Chemicals (Newly generated agro-chemical & green crops)
-  still(3, '', 'ESSENTIAL INPUTS', 'FERTILIZERS & CHEMICALS', 'v3', 0.85, d3),
-  
-  // Scene 4: Metals & Minerals (Newly generated high-tech metallurgy & refined minerals)
-  still(4, '', 'GLOBAL COMMODITIES', 'METALS & MINERALS', 'v4', 0.85, d4),
-  
-  // Scene 5: International Trading, Imports & Exports
-  still(5, '', 'GLOBAL TRADE', 'IMPORTS & EXPORTS', 'v5', 0.75, d5),
-  
-  // Scene 6: Global Supply Chains & Infrastructure (Intermodal transport routes)
-  still(6, '', 'INFRASTRUCTURE & EPC', 'GLOBAL SUPPLY CHAINS', 'v6', 0.85, d6),
-  
-  // Scene 7: Green Energy & Renewable Energy
-  still(7, '', 'SUSTAINABLE FUTURE', 'GREEN & RENEWABLE ENERGY', 'v7', 0.75, d7),
-  
-  // Scene 8 (Final Scene): Connecting Opportunities Across The World
-  still(8, '', 'CROSS-BORDER NETWORK', 'OPPORTUNITIES ACROSS THE WORLD', 'v8', 0.85, d8),
+  // Scene 1: Powering Industries
+  still(1, '', 'INDUSTRIAL POWER', 'POWERING INDUSTRIES', 'v1', 0.85, d1),
 
-  // Fast energetic crossfade transitions
+  // Scene 2: Connecting Nations
+  still(2, '', 'GLOBAL CONNECTIVITY', 'CONNECTING NATIONS', 'v2', 0.85, d2),
+
+  // Scene 3: Shaping a Sustainable Tomorrow
+  still(3, '', 'SUSTAINABLE FUTURE', 'SHAPING A SUSTAINABLE TOMORROW', 'v3', 0.85, d3),
+  
+  // Scene 4: Oil & Gas
+  still(4, '', 'ENERGY TRADE', 'OIL & GAS', 'v4', 0.85, d4),
+  
+  // Scene 5: Fertilizers & Chemicals
+  still(5, '', 'ESSENTIAL INPUTS', 'FERTILIZERS & CHEMICALS', 'v5', 0.85, d5),
+  
+  // Scene 6: Metals & Minerals
+  still(6, '', 'GLOBAL COMMODITIES', 'METALS & MINERALS', 'v6', 0.85, d6),
+  
+  // Scene 7: Imports & Exports (Dedicated deepwater maritime container terminal)
+  still(7, '', 'INTERNATIONAL TRADING', 'IMPORTS & EXPORTS', 'v7', 0.85, d7),
+  
+  // Scene 8: Global Supply Chains & Infrastructure (Intermodal transport routes)
+  still(8, '', 'INFRASTRUCTURE & EPC', 'GLOBAL SUPPLY CHAINS', 'v8', 0.85, d8),
+  
+  // Scene 9: Green Energy & Renewable Energy
+  still(9, '', 'SUSTAINABLE FUTURE', 'GREEN & RENEWABLE ENERGY', 'v9', 0.75, d9),
+  
+  // Scene 10 (Final Scene): Connecting Opportunities Across The World
+  still(10, '', 'CROSS-BORDER NETWORK', 'OPPORTUNITIES ACROSS THE WORLD', 'v10', 0.85, d10),
+
+  // Crossfade transitions
   `[v0][v1]xfade=transition=fade:duration=${trans}:offset=${off1}[x1]`,
   `[x1][v2]xfade=transition=fade:duration=${trans}:offset=${off2}[x2]`,
   `[x2][v3]xfade=transition=fade:duration=${trans}:offset=${off3}[x3]`,
@@ -108,23 +111,27 @@ const filters = [
   `[x4][v5]xfade=transition=fade:duration=${trans}:offset=${off5}[x5]`,
   `[x5][v6]xfade=transition=fade:duration=${trans}:offset=${off6}[x6]`,
   `[x6][v7]xfade=transition=fade:duration=${trans}:offset=${off7}[x7]`,
-  `[x7][v8]xfade=transition=fade:duration=${trans}:offset=${off8}[video]`,
+  `[x7][v8]xfade=transition=fade:duration=${trans}:offset=${off8}[x8]`,
+  `[x8][v9]xfade=transition=fade:duration=${trans}:offset=${off9}[x9]`,
+  `[x9][v10]xfade=transition=fade:duration=${trans}:offset=${off10}[video]`,
 ].join(';');
 
 const args = [
   '-y', '-hide_banner', '-loglevel', 'warning', '-stats',
   '-i', source('public/videos/Real_Estate_Animation_for_CBGIPL.mp4'),
-  '-loop', '1', '-framerate', '24', '-t', String(d1), '-i', source('src/media/hero/sustainable-tomorrow.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d2), '-i', source('src/media/hero/energy-new.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d3), '-i', source('src/media/hero/fertilizers-new.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d4), '-i', source('src/media/hero/metals-new.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d5), '-i', source('src/media/hero/global-trade.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d6), '-i', source('src/media/hero/global-supply-chains.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d7), '-i', source('src/media/hero/green-energy.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d8), '-i', source('src/media/hero/global-network.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d1), '-i', source('src/media/hero/powering-industries-new.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d2), '-i', source('src/media/hero/connecting-nations-new.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d3), '-i', source('src/media/hero/sustainable-tomorrow.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d4), '-i', source('src/media/hero/energy-new.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d5), '-i', source('src/media/hero/fertilizers-new.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d6), '-i', source('src/media/hero/metals-new.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d7), '-i', source('src/media/hero/imports-exports-new.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d8), '-i', source('src/media/hero/global-supply-chains.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d9), '-i', source('src/media/hero/green-energy.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d10), '-i', source('src/media/hero/global-network.jpg'),
   '-i', source('src/media/hero/hero-narration.m4a'),
   '-filter_complex', filters,
-  '-map', '[video]', '-map', '9:a:0',
+  '-map', '[video]', '-map', '11:a:0',
   '-t', String(totalDur),
   '-c:v', 'libx264', '-preset', 'slow', '-crf', '27',
   '-s:v', '960x540', '-pix_fmt', 'yuv420p', '-r', '24',
