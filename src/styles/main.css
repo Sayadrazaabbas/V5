@@ -2807,6 +2807,8 @@ select {
 }
 
 /* -- Mobile -- */
+.mobile-video-caption { display: none; }
+
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
   .section { padding: 80px 0; }
@@ -2814,7 +2816,54 @@ select {
   .section-desc { font-size: 1rem; }
   .section-header { margin-bottom: 48px; }
 
-  #home { height: 60vh !important; }
+  #home {
+    height: auto !important;
+    min-height: 0;
+    padding: 120px 0 62px;
+    background: var(--corporate-blue) !important;
+  }
+  #heroVideo {
+    position: relative !important;
+    inset: auto !important;
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    object-fit: contain !important;
+    background: #000;
+  }
+  #heroPosterLayer {
+    inset: auto !important;
+    top: 120px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: calc(100vw * 9 / 16) !important;
+    background-size: contain !important;
+  }
+  .mobile-video-caption {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    min-height: 86px;
+    padding: 13px 18px 8px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    background: var(--corporate-blue);
+  }
+  .mobile-video-caption span {
+    color: var(--gold);
+    font: 700 .72rem var(--font-accent);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .mobile-video-caption strong {
+    color: #fff;
+    font: 700 clamp(1.1rem, 5vw, 1.5rem) var(--font-heading);
+    line-height: 1.2;
+  }
   .hero-premium { padding: 80px 0 60px !important; }
   .hero-title, .hero-premium .hero-title { font-size: clamp(2rem, 8vw, 3rem) !important; }
   .hero-subtitle { font-size: 1rem; margin-bottom: 32px !important; }
@@ -2933,8 +2982,8 @@ select {
   .roadmap-premium .section-desc { max-width: 100% !important; }
   .leadership-hierarchy > div:first-child .leader-card { width: 100% !important; }
   #soundToggleBtn {
-    top: 130px;
-    bottom: auto !important;
+    top: auto !important;
+    bottom: 12px !important;
     right: 16px !important;
     padding: 8px 12px !important;
     font-size: .75rem !important;

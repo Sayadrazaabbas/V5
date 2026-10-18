@@ -27,7 +27,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.png">
   <!-- Preload First Appearance Image & Hero Video for Instant Playback -->
   <link rel="preload" as="image" href="./images/hero-poster.jpg" fetchpriority="high">
-  <link rel="preload" as="video" href="./videos/hero-bg.mp4" type="video/mp4" fetchpriority="high">
+  <link rel="preload" as="video" href="https://github.com/Sayadrazaabbas/V5/releases/download/v1.0-media/hero-bg.mp4" type="video/mp4" fetchpriority="high">
 
   <link rel="stylesheet" href="./src/styles/main.css" />
 </head>
@@ -91,8 +91,13 @@
     <!-- Video Element (Starts hidden, plays automatically only when fully loaded and buffered) -->
     <video id="heroVideo" loop muted playsinline preload="auto" poster="./images/hero-poster.jpg"
       style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; opacity: 0; transition: opacity 0.8s ease;">
+      <source src="https://github.com/Sayadrazaabbas/V5/releases/download/v1.0-media/hero-bg.mp4" type="video/mp4">
       <source src="./videos/hero-bg.mp4" type="video/mp4">
     </video>
+    <div class="mobile-video-caption" aria-hidden="true">
+      <span id="mobileVideoLabel">Carter Brown Global Infra Private Limited</span>
+      <strong id="mobileVideoTitle">Infrastructure + Global Trade</strong>
+    </div>
 
     <!-- Sound Toggle Button for Browser Autoplay Policy -->
     <button id="soundToggleBtn"
@@ -236,7 +241,7 @@
 
         <div class="about-visual" data-animate="fade-left" style="position: relative;">
           <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 40px 100px rgba(0,0,0,0.12);">
-            <img src="./images/sealink.jpg" alt="Mumbai Sea Link" style="width: 100%; height: 520px; object-fit: cover;">
+            <img src="./images/sealink.jpg" loading="lazy" decoding="async" alt="Mumbai Sea Link" style="width: 100%; height: 520px; object-fit: cover;">
 
             <div style="position: absolute; bottom: 30px; left: 30px; right: 30px; background: rgba(10, 28, 61, 0.95); backdrop-filter: blur(10px); padding: 32px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 15px 45px rgba(0,0,0,0.4);">
               <h5 style="color: #ffffff; margin-bottom: 12px; font-size: 1rem; font-family: var(--font-heading); line-height: 1.4;">Carter Brown Global Infra PVT LTD - Mumbai, Maharashtra, India</h5>
@@ -417,9 +422,9 @@
   <section class="section roadmap-premium" id="roadmap" style="background: var(--corporate-blue); padding: 160px 0; position: relative; overflow: hidden;">
     <!-- Dynamic Video Background replacing 3D Spline for better visibility -->
     <div style="position: absolute; inset: 0; z-index: 1; overflow: hidden;">
-      <video autoplay loop muted playsinline
+      <video class="deferred-video" autoplay loop muted playsinline preload="none"
              style="width: 100%; height: 100%; object-fit: cover; opacity: 0.3; filter: grayscale(20%) brightness(80%);">
-        <source src="./videos/Real_Estate_Animation_for_CBGIPL.mp4" type="video/mp4">
+        <source data-src="./videos/Real_Estate_Animation_for_CBGIPL.mp4" type="video/mp4">
       </video>
       <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, var(--corporate-blue) 0%, transparent 50%, var(--corporate-blue) 100%); opacity: 0.8;"></div>
     </div>
@@ -464,7 +469,7 @@
           <div class="leader-card" data-animate="fade-up" style="width: 420px;">
             <div class="leader-frame">
               <div class="leader-image">
-                <img src="./images/team/nusrat-ali-khan.png" alt="M. Nusrat Ali Khan" style="object-position: center 5%;">
+                <img src="./images/team/nusrat-ali-khan.png" loading="lazy" decoding="async" alt="M. Nusrat Ali Khan" style="object-position: center 5%;">
                 <div class="leader-info" style="padding: 40px; padding-bottom: 50px;">
                   <span class="leader-role" style="font-size: 0.85rem; letter-spacing: 3px;">Founder & Chairman</span>
                   <h3 style="color: #ffffff; margin-bottom: 12px; font-size: 1.8rem;">Mohammad Nusrat Ali Khan</h3>
@@ -483,7 +488,7 @@
             <div class="leader-frame">
               <div style="position: absolute; top: -5px; left: 50%; transform: translateX(-50%); width: 220px; height: 110px; border: 1.5px solid rgba(255,255,255,0.15); border-bottom: 0; border-radius: 110px 110px 0 0; z-index: 10; pointer-events: none;"></div>
               <div class="leader-image">
-                <img src="./images/team/gurudutt-harallekar.png" alt="GuruDutt Harallekar">
+                <img src="./images/team/gurudutt-harallekar.png" loading="lazy" decoding="async" alt="GuruDutt Harallekar">
                 <div class="leader-info">
                   <span class="leader-role">Director &amp; Financial Advisor</span>
                   <h3 style="color: var(--white); margin-bottom: 8px;">GuruDutt Harallekar</h3>
@@ -497,7 +502,7 @@
           <div class="leader-card" data-animate="fade-up" data-delay="200">
             <div class="leader-frame">
               <div class="leader-image">
-                <img src="./images/team/saifullah-kurlawala.jpeg" alt="Saifullah Kurlawala" style="object-position: center 15%;">
+                <img src="./images/team/saifullah-kurlawala.jpeg" loading="lazy" decoding="async" alt="Saifullah Kurlawala" style="object-position: center 15%;">
                 <div class="leader-info">
                   <span class="leader-role">VP - Business Development</span>
                   <h3 style="color: var(--white); margin-bottom: 8px;">Saifullah Kurlawala</h3>
@@ -511,7 +516,7 @@
           <div class="leader-card" data-animate="fade-up" data-delay="300">
             <div class="leader-frame">
               <div class="leader-image">
-                <img src="./images/team/shalim-ali.png" alt="Shalim Ali">
+                <img src="./images/team/shalim-ali.png" loading="lazy" decoding="async" alt="Shalim Ali">
                 <div class="leader-info">
                   <span class="leader-role">Director — Civil Infra</span>
                   <h3 style="color: var(--white); margin-bottom: 8px;">Shalim Ali</h3>
@@ -525,7 +530,7 @@
           <div class="leader-card" data-animate="fade-up" data-delay="400">
             <div class="leader-frame">
               <div class="leader-image">
-                <img src="./images/team/dinesh-brahambhatt.png" alt="Dr. Dinesh Brahmbhatt">
+                <img src="./images/team/dinesh-brahambhatt.png" loading="lazy" decoding="async" alt="Dr. Dinesh Brahmbhatt">
                 <div class="leader-info">
                   <span class="leader-role">Rtd. IAS — Independent Advisor</span>
                   <h3 style="color: var(--white); margin-bottom: 8px;">Dr. Dinesh Brahmbhatt</h3>
@@ -539,7 +544,7 @@
           <div class="leader-card" data-animate="fade-up" data-delay="500">
             <div class="leader-frame">
               <div class="leader-image">
-                <img src="./images/team/zafar-iqbal.png" alt="Zafar Iqbal">
+                <img src="./images/team/zafar-iqbal.png" loading="lazy" decoding="async" alt="Zafar Iqbal">
                 <div class="leader-info">
                   <span class="leader-role">Rtd. IAS — Independent Advisor</span>
                   <h3 style="color: var(--white); margin-bottom: 8px;">Zafar Iqbal</h3>
@@ -568,7 +573,7 @@
         <!-- Hafeez Contractor -->
         <a href="https://www.hafeezcontractor.com/" target="_blank" class="partner-card glass-card" data-animate="fade-up" style="display: block; text-decoration: none; border-radius: var(--radius-lg); overflow: hidden; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.5s var(--ease-out); position: relative; group;">
           <div style="height: 280px; overflow: hidden; position: relative;">
-            <img src="./images/alliances/hafeezcontractor.jpg" alt="Hafeez Contractor" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;">
+            <img src="./images/alliances/hafeezcontractor.jpg" loading="lazy" decoding="async" alt="Hafeez Contractor" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;">
             <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10, 28, 61, 0.9) 0%, transparent 60%);"></div>
           </div>
           <div style="padding: 32px; text-align: left;">
@@ -581,7 +586,7 @@
         <!-- Mahimtura -->
         <a href="https://mahimtura.com/" target="_blank" class="partner-card glass-card" data-animate="fade-up" data-delay="100" style="display: block; text-decoration: none; border-radius: var(--radius-lg); overflow: hidden; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.5s var(--ease-out); position: relative; group;">
           <div style="height: 280px; overflow: hidden; position: relative; background: rgba(255, 255, 255, 0.05); display: flex; align-items: center; justify-content: center; padding: 40px;">
-            <img src="./images/alliances/mahimtura.jpg" alt="Mahimtura Consultants" style="max-width: 80%; max-height: 80%; object-fit: contain; transition: transform 0.6s ease;">
+            <img src="./images/alliances/mahimtura.jpg" loading="lazy" decoding="async" alt="Mahimtura Consultants" style="max-width: 80%; max-height: 80%; object-fit: contain; transition: transform 0.6s ease;">
             <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10, 28, 61, 0.05) 0%, transparent 60%);"></div>
           </div>
           <div style="padding: 32px; text-align: left;">
@@ -636,8 +641,8 @@
 
           <!-- Mumbai (INDIA VIDEO) -->
           <div class="presence-card" data-animate="fade-up" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <video autoplay loop muted playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
-              <source src="./videos/INDIA.mp4" type="video/mp4">
+            <video class="deferred-video" autoplay loop muted playsinline preload="none" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
+              <source data-src="./videos/INDIA.mp4" type="video/mp4">
             </video>
             <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
             <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
@@ -651,8 +656,8 @@
 
           <!-- Dubai (UAE VIDEO) -->
           <div class="presence-card" data-animate="fade-up" data-delay="100" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <video autoplay loop muted playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
-              <source src="./videos/UAE.mp4" type="video/mp4">
+            <video class="deferred-video" autoplay loop muted playsinline preload="none" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
+              <source data-src="./videos/UAE.mp4" type="video/mp4">
             </video>
             <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
             <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
@@ -666,7 +671,7 @@
 
           <!-- Riyadh (INDIA VIDEO FALLBACK) -->
           <div class="presence-card" data-animate="fade-up" data-delay="200" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <img src="./videos/KSA.png" alt="Saudi Arabia Flag" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
+            <img src="./videos/KSA.png" loading="lazy" decoding="async" alt="Saudi Arabia Flag" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
             <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
             <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
               <div style="display: flex; align-items: center; margin-bottom: 8px;">
@@ -679,8 +684,8 @@
 
           <!-- London (UK VIDEO) -->
           <div class="presence-card" data-animate="fade-up" data-delay="300" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <video autoplay loop muted playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
-              <source src="./videos/UK.mp4" type="video/mp4">
+            <video class="deferred-video" autoplay loop muted playsinline preload="none" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
+              <source data-src="./videos/UK.mp4" type="video/mp4">
             </video>
             <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
             <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
@@ -694,7 +699,7 @@
 
           <!-- Hong Kong (INDIA VIDEO FALLBACK) -->
           <div class="presence-card" data-animate="fade-up" data-delay="400" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <img src="./videos/hk.png" alt="Hong Kong Flag" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
+            <img src="./videos/hk.png" loading="lazy" decoding="async" alt="Hong Kong Flag" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
             <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
             <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
               <div style="display: flex; align-items: center; margin-bottom: 8px;">
@@ -707,7 +712,7 @@
 
           <!-- Singapore (INDIA VIDEO FALLBACK) -->
           <div class="presence-card" data-animate="fade-up" data-delay="500" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <img src="./videos/singapore.png" alt="Singapore Flag" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
+            <img src="./videos/singapore.png" loading="lazy" decoding="async" alt="Singapore Flag" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
             <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
             <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
               <div style="display: flex; align-items: center; margin-bottom: 8px;">
