@@ -1,6 +1,6 @@
 // Rebuild the V5 hero montage from the existing real-estate film and
-// illustrative images supplied in the corporate business profile, synchronized
-// with every spoken keyword, charming original audio tune, and 200%+ volume.
+// corporate business profile imagery, synchronized with every spoken keyword,
+// enhanced energetic background music, bold tempo, and 200%+ volume.
 // Restructured order:
 // 1. Intro 3D Animation (CBG IPL — Carter Brown Global Infra Private Limited. Building the Foundations for the Future.)
 // 2. Powering Industries & Shaping Sustainable Tomorrow (Modern Skyline & Growth)
@@ -38,36 +38,36 @@ function still(input, crop, label, title, name, bandOpacity, duration) {
     `setsar=1,format=yuv420p,${caption(label, title, bandOpacity)},fps=24,settb=1/24[${name}]`;
 }
 
-// Scene Durations synchronized with every dialogue:
+// Calibrated Scene Durations synchronized with energetic dialogs:
 // d0 (Intro 3D): 8.0s
-// d1 (Powering Industries): 6.8s
-// d2 (Oil & Gas): 2.5s
-// d3 (Fertilizers & Chemicals): 2.9s
-// d4 (Metals & Minerals): 2.7s
-// d5 (Imports & Exports): 6.6s
-// d6 (Infrastructure & Supply Chains): 8.3s
-// d7 (Green Energy): 8.2s
-// d8 (Grand Final Ending: Global Opportunities Across The World): 8.8s
+// d1 (Powering Industries): 6.5s
+// d2 (Oil & Gas): 2.4s
+// d3 (Fertilizers & Chemicals): 2.8s
+// d4 (Metals & Minerals): 2.6s
+// d5 (Imports & Exports): 6.4s
+// d6 (Infrastructure & Supply Chains): 8.0s
+// d7 (Green Energy): 7.9s
+// d8 (Grand Final Ending: Global Opportunities Across The World): 8.4s
 const d0 = 8.0;
-const d1 = 6.8;
-const d2 = 2.5;
-const d3 = 2.9;
-const d4 = 2.7;
-const d5 = 6.6;
-const d6 = 8.3;
-const d7 = 8.2;
-const d8 = 8.8;
-const trans = 0.4;
+const d1 = 6.5;
+const d2 = 2.4;
+const d3 = 2.8;
+const d4 = 2.6;
+const d5 = 6.4;
+const d6 = 8.0;
+const d7 = 7.9;
+const d8 = 8.4;
+const trans = 0.35;
 
-const off1 = d0 - trans;               // 7.6
-const off2 = off1 + d1 - trans;        // 14.0
-const off3 = off2 + d2 - trans;        // 16.1
-const off4 = off3 + d3 - trans;        // 18.6
-const off5 = off4 + d4 - trans;        // 20.9
-const off6 = off5 + d5 - trans;        // 27.1
-const off7 = off6 + d6 - trans;        // 35.0
-const off8 = off7 + d7 - trans;        // 42.8
-const totalDur = off8 + d8;            // 51.6s ~ 54.0s (full coverage of master audio)
+const off1 = d0 - trans;               // 7.65
+const off2 = off1 + d1 - trans;        // 13.80
+const off3 = off2 + d2 - trans;        // 15.85
+const off4 = off3 + d3 - trans;        // 18.30
+const off5 = off4 + d4 - trans;        // 20.55
+const off6 = off5 + d5 - trans;        // 26.60
+const off7 = off6 + d6 - trans;        // 34.25
+const off8 = off7 + d7 - trans;        // 41.80
+const totalDur = off8 + d8;            // 49.85s ~ 52.0s
 
 const filters = [
   // Scene 0: Authentic 3D Architectural intro
@@ -100,7 +100,7 @@ const filters = [
   // Scene 8 (Final Scene): Connecting Opportunities Across The World
   still(8, '', 'CROSS-BORDER NETWORK', 'OPPORTUNITIES ACROSS THE WORLD', 'v8', 0.85, d8),
 
-  // Crossfade transitions
+  // Fast energetic crossfade transitions
   `[v0][v1]xfade=transition=fade:duration=${trans}:offset=${off1}[x1]`,
   `[x1][v2]xfade=transition=fade:duration=${trans}:offset=${off2}[x2]`,
   `[x2][v3]xfade=transition=fade:duration=${trans}:offset=${off3}[x3]`,
