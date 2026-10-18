@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initCounters();
   initProjectFilters();
+  initServiceFilters();
   initHeroParticles();
   initMobileNav();
   initBackToTop();
@@ -230,17 +231,36 @@ function initNavbar() {
       navbar.classList.remove('scrolled');
     }
 
-    // Active nav link based on current page
-    const currentPath = window.location.pathname;
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.classList.remove('active');
-      const href = link.getAttribute('href');
-      if (href === '/' && (currentPath === '/' || currentPath === '/index.html')) {
-        link.classList.add('active');
-      } else if (href !== '/' && currentPath.includes(href)) {
-        link.classList.add('active');
+    // Active nav link based on section in view
+    const navLinks = document.querySelectorAll('.navbar-links .nav-link');
+    const sections = ['contact', 'status', 'global-footprint', 'partners', 'leadership', 'roadmap', 'services', 'about', 'home'];
+    let activeFound = false;
+
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= 200 && rect.bottom >= 100) {
+          navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === `#${id}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+          activeFound = true;
+          break;
+        }
       }
-    });
+    }
+
+    if (!activeFound && currentScroll < 150) {
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === '#home') link.classList.add('active');
+        else link.classList.remove('active');
+      });
+    }
 
     lastScroll = currentScroll;
   });
@@ -341,6 +361,38 @@ function initProjectFilters() {
           } else {
             card.classList.add('hidden');
           }
+        }
+      });
+    });
+  });
+}
+
+/* ── SERVICE FILTERS ── */
+function initServiceFilters() {
+  const filterBtns = document.querySelectorAll('.service-filter-btn');
+  const cards = document.querySelectorAll('.service-card-luxury');
+  if (!filterBtns.length || !cards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+
+      cards.forEach(card => {
+        const category = card.dataset.category || '';
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'flex';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(16px)';
+          requestAnimationFrame(() => {
+            card.style.transition = 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          });
+        } else {
+          card.style.display = 'none';
         }
       });
     });

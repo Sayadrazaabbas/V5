@@ -65,11 +65,12 @@
       <ul class="navbar-links" id="navLinks">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#status" class="nav-link">Development</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
         <li><a href="#leadership" class="nav-link">Leadership</a></li>
         <li><a href="#partners" class="nav-link">Alliance</a></li>
         <li><a href="#global-footprint" class="nav-link">Global Reach</a></li>
+        <li><a href="#status" class="nav-link">Development</a></li>
         <li><a href="#contact" class="nav-link cta-link">Contact Us</a></li>
       </ul>
       <button class="navbar-toggle" id="navToggle" aria-label="Toggle menu">
@@ -358,113 +359,210 @@
   <!-- ========== SERVICES SECTION ========== -->
   <section class="section services-premium" id="services" style="background: var(--corporate-blue); padding: 140px 0;">
     <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 70px;" data-animate="fade-up">
+      <div class="section-header" style="text-align: center; margin-bottom: 20px;" data-animate="fade-up">
         <span class="section-tag" style="background: rgba(212, 175, 55, 0.1); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.25);">Core Services &amp; Capabilities</span>
         <h2 class="section-title" style="font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.03em; color: #ffffff;">Our Dedicated <span class="text-gradient">Services</span></h2>
         <p class="section-desc" style="color: var(--text-secondary); max-width: 780px; margin: 20px auto 0; line-height: 1.8; font-size: 1.15rem;">From master-planned urban developments and engineering procurement construction to strategic cross-border commodity trading and supply chain infrastructure.</p>
       </div>
 
+      <!-- Creative Filter Pills -->
+      <div class="service-filter-bar" data-animate="fade-up">
+        <button class="service-filter-btn active" data-filter="all"><i data-lucide="globe"></i> All Capabilities</button>
+        <button class="service-filter-btn" data-filter="development"><i data-lucide="building-2"></i> Real Estate &amp; EPC</button>
+        <button class="service-filter-btn" data-filter="commodities"><i data-lucide="flame"></i> Energy &amp; Commodities</button>
+        <button class="service-filter-btn" data-filter="trade"><i data-lucide="ship"></i> Global Logistics</button>
+      </div>
+
       <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; width: 100%;">
 
         <!-- Service 1: Real Estate Development -->
-        <div class="service-card glass-card" data-animate="fade-up" style="padding: 48px 36px; border-radius: 24px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 40px rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-          <div class="service-icon" style="width: 72px; height: 72px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px; border: 1px solid rgba(212, 175, 55, 0.3);">
-            <i data-lucide="building-2" style="color: var(--gold); width: 36px; height: 36px;"></i>
+        <div class="service-card-luxury" data-category="development" data-animate="fade-up">
+          <div class="service-visual-header">
+            <img src="./images/services/real-estate.jpg" alt="Real Estate Development" class="service-visual-img" loading="lazy">
+            <div class="service-visual-overlay"></div>
+            <span class="service-tag-pill">Urban Development</span>
+            <span class="service-numeral">01</span>
           </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-family: var(--font-heading); font-weight: 700; color: #ffffff;">Real Estate Development</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; font-size: 0.95rem;">Landmark residential towers, commercial business parks, integrated mega-townships, and high-value urban renewal across Mumbai and key metropolitan corridors.</p>
-          <ul style="list-style: none; padding: 0; display: grid; gap: 12px; color: var(--text-secondary); font-size: 0.9rem;">
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Luxury Residential &amp; High-Rises</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Commercial Grade-A Hubs</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Mixed-Use Townships &amp; Infill</li>
-          </ul>
+          <div class="service-floating-icon">
+            <i data-lucide="building-2"></i>
+          </div>
+          <div class="service-card-body">
+            <span class="service-sector-sub">Master Planning &amp; Living Spaces</span>
+            <h3 class="service-card-title">Real Estate Development</h3>
+            <p class="service-card-desc">Landmark residential towers, commercial business parks, integrated mega-townships, and high-value urban renewal across Mumbai and key metropolitan corridors.</p>
+            <ul class="service-bullet-list">
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Luxury Residential Towers &amp; High-Rises</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Commercial Grade-A Corporate Parks</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Mixed-Use Townships &amp; Cluster Redevelopment</span></li>
+            </ul>
+            <a href="#contact" class="service-card-action">
+              <span>Enquire Opportunities</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
         </div>
 
         <!-- Service 2: Infrastructure & EPC -->
-        <div class="service-card glass-card" data-animate="fade-up" data-delay="100" style="padding: 48px 36px; border-radius: 24px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 40px rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-          <div class="service-icon" style="width: 72px; height: 72px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px; border: 1px solid rgba(212, 175, 55, 0.3);">
-            <i data-lucide="hard-hat" style="color: var(--gold); width: 36px; height: 36px;"></i>
+        <div class="service-card-luxury" data-category="development" data-animate="fade-up" data-delay="100">
+          <div class="service-visual-header">
+            <img src="./images/services/infrastructure.jpg" alt="Infrastructure and EPC" class="service-visual-img" loading="lazy">
+            <div class="service-visual-overlay"></div>
+            <span class="service-tag-pill">Transit &amp; Civil EPC</span>
+            <span class="service-numeral">02</span>
           </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-family: var(--font-heading); font-weight: 700; color: #ffffff;">Infrastructure &amp; EPC</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; font-size: 0.95rem;">Turnkey Engineering, Procurement, and Construction (EPC) services for transportation arteries, civil utilities, bridges, and industrial growth zones.</p>
-          <ul style="list-style: none; padding: 0; display: grid; gap: 12px; color: var(--text-secondary); font-size: 0.9rem;">
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Highways, Roads &amp; Viaducts</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Industrial Utilities &amp; Civil Works</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Turnkey Project Lifecycle Coordination</li>
-          </ul>
+          <div class="service-floating-icon">
+            <i data-lucide="hard-hat"></i>
+          </div>
+          <div class="service-card-body">
+            <span class="service-sector-sub">Turnkey Engineering &amp; Civil Works</span>
+            <h3 class="service-card-title">Infrastructure &amp; EPC</h3>
+            <p class="service-card-desc">Turnkey Engineering, Procurement, and Construction (EPC) services for transportation arteries, civil utilities, bridges, and industrial growth zones.</p>
+            <ul class="service-bullet-list">
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Highways, Roads &amp; Elevated Viaducts</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Industrial Utilities &amp; Smart Civil Infrastructure</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Turnkey Project Lifecycle Coordination</span></li>
+            </ul>
+            <a href="#contact" class="service-card-action">
+              <span>Explore Projects</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
         </div>
 
         <!-- Service 3: Energy Trade: Oil & Gas -->
-        <div class="service-card glass-card" data-animate="fade-up" data-delay="200" style="padding: 48px 36px; border-radius: 24px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 40px rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-          <div class="service-icon" style="width: 72px; height: 72px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px; border: 1px solid rgba(212, 175, 55, 0.3);">
-            <i data-lucide="flame" style="color: var(--gold); width: 36px; height: 36px;"></i>
+        <div class="service-card-luxury" data-category="commodities" data-animate="fade-up" data-delay="200">
+          <div class="service-visual-header">
+            <img src="./images/services/oil-gas.jpg" alt="Oil and Gas Trading" class="service-visual-img" loading="lazy">
+            <div class="service-visual-overlay"></div>
+            <span class="service-tag-pill">Energy Trading</span>
+            <span class="service-numeral">03</span>
           </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-family: var(--font-heading); font-weight: 700; color: #ffffff;">Oil &amp; Gas Trading</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; font-size: 0.95rem;">Cross-border sourcing and wholesale trading of refined petroleum products, LNG, crude derivatives, and energy fuels with strict quality and safety documentation.</p>
-          <ul style="list-style: none; padding: 0; display: grid; gap: 12px; color: var(--text-secondary); font-size: 0.9rem;">
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Refined Petroleum Derivatives</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Liquefied Natural Gas (LNG)</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Tank Farm &amp; Marine Bunkering Storage</li>
-          </ul>
+          <div class="service-floating-icon">
+            <i data-lucide="flame"></i>
+          </div>
+          <div class="service-card-body">
+            <span class="service-sector-sub">Refined Fuels &amp; Liquefied Gas</span>
+            <h3 class="service-card-title">Oil &amp; Gas Trading</h3>
+            <p class="service-card-desc">Cross-border sourcing and wholesale trading of refined petroleum products, LNG, crude derivatives, and energy fuels with strict quality and safety documentation.</p>
+            <ul class="service-bullet-list">
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Refined Petroleum Derivatives (Diesel EN590, Jet A1)</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Liquefied Natural Gas (LNG) &amp; Pipeline Sourcing</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Tank Farm Storage Allocation &amp; Marine Bunkering</span></li>
+            </ul>
+            <a href="#contact" class="service-card-action">
+              <span>Request Fuel Specifications</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
         </div>
 
         <!-- Service 4: Fertilizers & Chemicals -->
-        <div class="service-card glass-card" data-animate="fade-up" style="padding: 48px 36px; border-radius: 24px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 40px rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-          <div class="service-icon" style="width: 72px; height: 72px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px; border: 1px solid rgba(212, 175, 55, 0.3);">
-            <i data-lucide="flask-conical" style="color: var(--gold); width: 36px; height: 36px;"></i>
+        <div class="service-card-luxury" data-category="commodities" data-animate="fade-up">
+          <div class="service-visual-header">
+            <img src="./images/services/fertilizers.jpg" alt="Fertilizers and Chemicals" class="service-visual-img" loading="lazy">
+            <div class="service-visual-overlay"></div>
+            <span class="service-tag-pill">Agro-Chemicals</span>
+            <span class="service-numeral">04</span>
           </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-family: var(--font-heading); font-weight: 700; color: #ffffff;">Chemicals &amp; Fertilizers</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; font-size: 0.95rem;">International bulk sourcing of agricultural nutrient inputs and industrial chemical reagents to empower agribusiness and manufacturing supply chains.</p>
-          <ul style="list-style: none; padding: 0; display: grid; gap: 12px; color: var(--text-secondary); font-size: 0.9rem;">
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Granular Urea, DAP &amp; NPK Blends</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Industrial Acids &amp; Basic Chemicals</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Guaranteed SGS / Bureau Veritas Verification</li>
-          </ul>
+          <div class="service-floating-icon">
+            <i data-lucide="flask-conical"></i>
+          </div>
+          <div class="service-card-body">
+            <span class="service-sector-sub">Nutrient Security &amp; Basic Chemicals</span>
+            <h3 class="service-card-title">Chemicals &amp; Fertilizers</h3>
+            <p class="service-card-desc">International bulk sourcing of agricultural nutrient inputs and industrial chemical reagents to empower agribusiness and manufacturing supply chains.</p>
+            <ul class="service-bullet-list">
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Granular Urea (N46%), DAP &amp; Custom NPK Blends</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Industrial Acids &amp; Basic Petrochemical Reagents</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Guaranteed SGS / Bureau Veritas Verification</span></li>
+            </ul>
+            <a href="#contact" class="service-card-action">
+              <span>Inquire Allocation</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
         </div>
 
         <!-- Service 5: Metals & Minerals -->
-        <div class="service-card glass-card" data-animate="fade-up" data-delay="100" style="padding: 48px 36px; border-radius: 24px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 40px rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-          <div class="service-icon" style="width: 72px; height: 72px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px; border: 1px solid rgba(212, 175, 55, 0.3);">
-            <i data-lucide="layers" style="color: var(--gold); width: 36px; height: 36px;"></i>
+        <div class="service-card-luxury" data-category="commodities" data-animate="fade-up" data-delay="100">
+          <div class="service-visual-header">
+            <img src="./images/services/metals.jpg" alt="Metals and Minerals" class="service-visual-img" loading="lazy">
+            <div class="service-visual-overlay"></div>
+            <span class="service-tag-pill">Metallurgy</span>
+            <span class="service-numeral">05</span>
           </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-family: var(--font-heading); font-weight: 700; color: #ffffff;">Metals &amp; Minerals</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; font-size: 0.95rem;">Direct trade and distribution of industrial metals, ferrous and non-ferrous commodities, steel billets, and mineral ores essential for high-capacity manufacturing.</p>
-          <ul style="list-style: none; padding: 0; display: grid; gap: 12px; color: var(--text-secondary); font-size: 0.9rem;">
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Copper Cathodes &amp; Aluminium Ingots</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Structural Steel, Rebars &amp; Billets</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Industrial Mineral Aggregates &amp; Iron Ore</li>
-          </ul>
+          <div class="service-floating-icon">
+            <i data-lucide="layers"></i>
+          </div>
+          <div class="service-card-body">
+            <span class="service-sector-sub">Ferrous &amp; Non-Ferrous Commodities</span>
+            <h3 class="service-card-title">Metals &amp; Minerals</h3>
+            <p class="service-card-desc">Direct trade and distribution of industrial metals, ferrous and non-ferrous commodities, steel billets, and mineral ores essential for high-capacity manufacturing.</p>
+            <ul class="service-bullet-list">
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Copper Cathodes (Grade A) &amp; Aluminium Ingots</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Structural Steel Rebars, Billets &amp; Wire Rods</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Industrial Mineral Aggregates &amp; Iron Ore Shipments</span></li>
+            </ul>
+            <a href="#contact" class="service-card-action">
+              <span>Request Metal Grade Availability</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
         </div>
 
         <!-- Service 6: International Trading & Maritime Logistics -->
-        <div class="service-card glass-card" data-animate="fade-up" data-delay="200" style="padding: 48px 36px; border-radius: 24px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 40px rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-          <div class="service-icon" style="width: 72px; height: 72px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px; border: 1px solid rgba(212, 175, 55, 0.3);">
-            <i data-lucide="ship" style="color: var(--gold); width: 36px; height: 36px;"></i>
+        <div class="service-card-luxury" data-category="trade" data-animate="fade-up" data-delay="200">
+          <div class="service-visual-header">
+            <img src="./images/services/international-trade.jpg" alt="International Trade and Maritime Logistics" class="service-visual-img" loading="lazy">
+            <div class="service-visual-overlay"></div>
+            <span class="service-tag-pill">Maritime Logistics</span>
+            <span class="service-numeral">06</span>
           </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-family: var(--font-heading); font-weight: 700; color: #ffffff;">International Trade &amp; Logistics</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; font-size: 0.95rem;">Structured cross-border trade finance, Letter of Credit (LC) execution, ocean freight chartering, and multi-modal import/export supply chain management.</p>
-          <ul style="list-style: none; padding: 0; display: grid; gap: 12px; color: var(--text-secondary); font-size: 0.9rem;">
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Documentary LC &amp; Trade Finance Structuring</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Charter Party &amp; Container Maritime Logistics</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;"><i data-lucide="check-circle-2" style="color: var(--gold); width: 16px;"></i> Customs Clearance &amp; Port Storage Management</li>
-          </ul>
+          <div class="service-floating-icon">
+            <i data-lucide="ship"></i>
+          </div>
+          <div class="service-card-body">
+            <span class="service-sector-sub">Cross-Border Freight &amp; Trade Finance</span>
+            <h3 class="service-card-title">International Trade &amp; Logistics</h3>
+            <p class="service-card-desc">Structured cross-border trade finance, Letter of Credit (LC) execution, ocean freight chartering, and multi-modal import/export supply chain management.</p>
+            <ul class="service-bullet-list">
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Documentary LC &amp; Trade Finance Structuring</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Charter Party &amp; Container Maritime Logistics</span></li>
+              <li class="service-bullet-item"><i data-lucide="check-circle-2"></i><span>Customs Clearance &amp; Port Storage Management</span></li>
+            </ul>
+            <a href="#contact" class="service-card-action">
+              <span>Initiate Trade Consultation</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
         </div>
 
       </div>
 
       <!-- Trade Governance & Compliance Banner -->
-      <div class="glass-card commodity-focus" data-animate="fade-up" style="margin-top: 50px; padding: 44px 48px; border-radius: 24px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
-          <div style="max-width: 700px;">
-            <span class="section-tag" style="background: rgba(212, 175, 55, 0.1); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.25);">Transaction Governance</span>
-            <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.8rem; margin: 16px 0;">Essential Commodities. Disciplined Execution.</h3>
-            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">CBGIPL executes trading contracts with institutional diligence. Specifications, counterparty KYC, origin, inspection by world-class surveyors (SGS / Intertek), delivery terms (CIF/FOB), and banking frameworks are rigorously agreed on a transaction-by-transaction basis.</p>
+      <div class="glass-card" data-animate="fade-up" style="margin-top: 60px; padding: 48px; border-radius: 28px; background: rgba(10, 22, 40, 0.85); border: 1px solid rgba(212, 175, 55, 0.3); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 32px;">
+          <div style="max-width: 660px;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px;">
+              <i data-lucide="shield-check" style="width: 18px; height: 18px;"></i>
+              Transaction Governance &amp; Compliance
+            </div>
+            <h3 style="color: #ffffff; font-family: var(--font-heading); font-size: 1.9rem; font-weight: 700; margin-bottom: 14px; line-height: 1.25;">Essential Commodities. Institutional Discipline.</h3>
+            <p style="color: rgba(255, 255, 255, 0.75); line-height: 1.75; margin: 0; font-size: 0.95rem;">CBGIPL executes trading and EPC contracts with strict institutional diligence. Counterparty KYC, certified lab analysis (SGS / Intertek), Incoterms (CIF/FOB), and tier-1 banking documentary frameworks are rigorously agreed on a transaction-by-transaction basis.</p>
           </div>
-          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <span style="padding: 10px 20px; background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 50px; color: var(--gold); font-size: 0.85rem; font-weight: 600;">Oil &amp; Gas</span>
-            <span style="padding: 10px 20px; background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 50px; color: var(--gold); font-size: 0.85rem; font-weight: 600;">Fertilizers</span>
-            <span style="padding: 10px 20px; background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 50px; color: var(--gold); font-size: 0.85rem; font-weight: 600;">Metals</span>
-            <span style="padding: 10px 20px; background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 50px; color: var(--gold); font-size: 0.85rem; font-weight: 600;">EPC &amp; Infra</span>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; flex-shrink: 0;">
+            <div style="display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 12px; color: #ffffff; font-size: 0.85rem; font-weight: 600;">
+              <i data-lucide="shield-check" style="color: var(--gold); width: 18px; height: 18px;"></i> SGS / Intertek Assay
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 12px; color: #ffffff; font-size: 0.85rem; font-weight: 600;">
+              <i data-lucide="landmark" style="color: var(--gold); width: 18px; height: 18px;"></i> Tier-1 Bank LCs
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 12px; color: #ffffff; font-size: 0.85rem; font-weight: 600;">
+              <i data-lucide="ship" style="color: var(--gold); width: 18px; height: 18px;"></i> CIF / FOB IncoTerms
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 12px; color: #ffffff; font-size: 0.85rem; font-weight: 600;">
+              <i data-lucide="check-circle-2" style="color: var(--gold); width: 18px; height: 18px;"></i> Zero-Default Record
+            </div>
           </div>
         </div>
       </div>
@@ -674,109 +772,81 @@
     </div>
   </section>
 
-  <!-- ========== GLOBAL PRESENCE (VIDEO RESTRUCTURED) ========== -->
-  <section class="section presence-premium" id="global-footprint" style="background: var(--corporate-blue); padding: 160px 0; position: relative; overflow: hidden;">
-    <!-- Background Decoration -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.1;">
-      <div style="position: absolute; top: 20%; left: 10%; width: 300px; height: 300px; background: rgba(255, 255, 255, 0.2); filter: blur(150px); border-radius: 50%;"></div>
-    </div>
-
+  <!-- ========== INTERNATIONAL REACH ========== -->
+  <section class="section reach-section" id="global-footprint" aria-labelledby="reach-title">
     <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 80px;">
-        <span class="section-tag" style="background: rgba(255, 255, 255, 0.1); color: #ffffff; border-color: rgba(255, 255, 255, 0.2);">International Reach</span>
-        <h2 class="section-title" style="color: #ffffff;">Global <span class="text-gradient">Market Access</span></h2>
-        <p class="section-desc" style="color: rgba(255,255,255,0.75);">India is our headquarters; other locations show group or network market relationships, not owned offices or facilities.</p>
-        <p class="section-desc" style="max-width: 700px; margin: 0 auto; color: rgba(255, 255, 255, 0.7);">Connecting India with group and business networks across the Middle East, Asia and Europe.</p>
-      </div>
-
-      <div style="width: 100%; overflow-x: auto; padding-bottom: 20px; scrollbar-width: none; -ms-overflow-style: none;">
-        <div class="presence-grid">
-
-          <!-- Mumbai (INDIA VIDEO) -->
-          <div class="presence-card" data-animate="fade-up" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <video class="deferred-video" autoplay loop muted playsinline preload="none" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
-              <source data-src="./videos/INDIA.mp4" type="video/mp4">
-            </video>
-            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
-            <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
-              <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                <h3 style="font-size: 1.5rem; color: #ffffff; font-family: var(--font-heading); margin: 0;"><span style="color: var(--gold); margin-right: 12px; font-weight: 800;">IN</span>Mumbai & Delhi</h3>
-              </div>
-              <p style="color: var(--gold); font-family: var(--font-accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; font-weight: 700;">Mumbai Headquarters</p>
-              <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; line-height: 1.5; margin: 0;">Real Estate and Infra</p>
-            </div>
-          </div>
-
-          <!-- Dubai (UAE VIDEO) -->
-          <div class="presence-card" data-animate="fade-up" data-delay="100" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <video class="deferred-video" autoplay loop muted playsinline preload="none" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
-              <source data-src="./videos/UAE.mp4" type="video/mp4">
-            </video>
-            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
-            <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
-              <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                <h3 style="font-size: 1.5rem; color: #ffffff; font-family: var(--font-heading); margin: 0;"><span style="color: var(--gold); margin-right: 12px; font-weight: 800;">UAE</span>Dubai</h3>
-              </div>
-              <p style="color: var(--gold); font-family: var(--font-accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; font-weight: 700;">Market Connectivity</p>
-              <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; line-height: 1.5; margin: 0;">Commodities Trading</p>
-            </div>
-          </div>
-
-          <!-- Riyadh (INDIA VIDEO FALLBACK) -->
-          <div class="presence-card" data-animate="fade-up" data-delay="200" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <img src="./videos/KSA.png" loading="lazy" decoding="async" alt="Saudi Arabia Flag" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
-            <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
-              <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                <h3 style="font-size: 1.5rem; color: #ffffff; font-family: var(--font-heading); margin: 0;"><span style="color: var(--gold); margin-right: 12px; font-weight: 800;">KSA</span>Riyadh</h3>
-              </div>
-              <p style="color: var(--gold); font-family: var(--font-accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; font-weight: 700;">Project Relationships</p>
-              <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; line-height: 1.5; margin: 0;">Driving infrastructure and engineering collaborations.</p>
-            </div>
-          </div>
-
-          <!-- London (UK VIDEO) -->
-          <div class="presence-card" data-animate="fade-up" data-delay="300" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <video class="deferred-video" autoplay loop muted playsinline preload="none" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
-              <source data-src="./videos/UK.mp4" type="video/mp4">
-            </video>
-            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
-            <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
-              <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                <h3 style="font-size: 1.5rem; color: #ffffff; font-family: var(--font-heading); margin: 0;"><span style="color: var(--gold); margin-right: 12px; font-weight: 800;">UK</span>London</h3>
-              </div>
-              <p style="color: var(--gold); font-family: var(--font-accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; font-weight: 700;">Strategic</p>
-              <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; line-height: 1.5; margin: 0;">Business Alliance</p>
-            </div>
-          </div>
-
-          <!-- Hong Kong (INDIA VIDEO FALLBACK) -->
-          <div class="presence-card" data-animate="fade-up" data-delay="400" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <img src="./videos/hk.png" loading="lazy" decoding="async" alt="Hong Kong Flag" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
-            <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
-              <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                <h3 style="font-size: 1.5rem; color: #ffffff; font-family: var(--font-heading); margin: 0;"><span style="color: var(--gold); margin-right: 12px; font-weight: 800;">HK</span>Hong Kong</h3>
-              </div>
-              <p style="color: var(--gold); font-family: var(--font-accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; font-weight: 700;">Trading Relationships</p>
-              <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; line-height: 1.5; margin: 0;">Trading and procurement relationships.</p>
-            </div>
-          </div>
-
-          <!-- Singapore (INDIA VIDEO FALLBACK) -->
-          <div class="presence-card" data-animate="fade-up" data-delay="500" style="position: relative; height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); transition: all 0.5s var(--ease-out); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--gold-glimmer)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--glass-border)';" onclick="window.location.hash='contact'">
-            <img src="./videos/singapore.png" loading="lazy" decoding="async" alt="Singapore Flag" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.5s ease;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(10, 28, 61, 0.95)); z-index: 1;"></div>
-            <div class="presence-info" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; z-index: 2;">
-              <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                <h3 style="font-size: 1.5rem; color: #ffffff; font-family: var(--font-heading); margin: 0;"><span style="color: var(--gold); margin-right: 12px; font-weight: 800;">SGP</span>Singapore</h3>
-              </div>
-              <p style="color: var(--gold); font-family: var(--font-accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; font-weight: 700;">Commodities</p>
-              <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; line-height: 1.5; margin: 0;">Commodities market relationships</p>
-            </div>
-          </div>
+      <div class="reach-heading">
+        <div>
+          <span class="section-tag reach-tag">International Reach</span>
+          <h2 class="section-title" id="reach-title">Global <span class="text-gradient">Market Access</span></h2>
+          <p>From our Mumbai headquarters, we connect with group and business networks across the Middle East, Asia and Europe.</p>
+        </div>
+        <div class="reach-heading-aside">
+          <span>01 / 06</span>
+          <strong>Rooted in India.<br>Connected globally.</strong>
+          <p>Explore the markets and relationships that extend our reach.</p>
         </div>
       </div>
+
+      <div class="reach-route" aria-hidden="true">
+        <span><i></i> Mumbai, India <small>Headquarters</small></span>
+        <span class="reach-route-line"></span>
+        <span>Middle East <b>?</b> Asia <b>?</b> Europe</span>
+      </div>
+
+      <div class="reach-grid">
+        <a class="reach-card reach-card-home" href="#contact" data-animate="fade-up">
+          <img class="reach-card-poster" src="./images/reach/india.webp" alt="" loading="lazy" decoding="async">
+          <video class="deferred-video reach-card-video" autoplay loop muted playsinline preload="none" poster="./images/reach/india.webp" aria-hidden="true"><source data-src="./videos/INDIA.mp4" type="video/mp4"></video>
+          <span class="reach-card-shade"></span>
+          <span class="reach-card-top"><span>01 / India</span><span class="reach-card-type">Headquarters</span></span>
+          <span class="reach-card-content">
+            <span class="reach-card-eyebrow">Our home base</span>
+            <strong>Mumbai <em>&amp; Delhi</em></strong>
+            <span class="reach-card-description">Mumbai Headquarters<br>Real Estate &amp; Infrastructure</span>
+            <span class="reach-card-action">Connect with us <span aria-hidden="true">?</span></span>
+          </span>
+        </a>
+
+        <a class="reach-card reach-card-video-market" href="#contact" data-animate="fade-up" data-delay="100">
+          <img class="reach-card-poster" src="./images/reach/uae.webp" alt="" loading="lazy" decoding="async">
+          <video class="deferred-video reach-card-video" autoplay loop muted playsinline preload="none" poster="./images/reach/uae.webp" aria-hidden="true"><source data-src="./videos/UAE.mp4" type="video/mp4"></video>
+          <span class="reach-card-shade"></span>
+          <span class="reach-card-top"><span>02 / UAE</span><span class="reach-card-type">Group network</span></span>
+          <span class="reach-card-content"><span class="reach-card-eyebrow">Market connectivity</span><strong>Dubai</strong><span class="reach-card-description">Commodities trading relationships</span></span>
+        </a>
+
+        <a class="reach-card reach-card-video-market" href="#contact" data-animate="fade-up" data-delay="150">
+          <img class="reach-card-poster" src="./images/reach/uk.webp" alt="" loading="lazy" decoding="async">
+          <video class="deferred-video reach-card-video" autoplay loop muted playsinline preload="none" poster="./images/reach/uk.webp" aria-hidden="true"><source data-src="./videos/UK.mp4" type="video/mp4"></video>
+          <span class="reach-card-shade"></span>
+          <span class="reach-card-top"><span>03 / UK</span><span class="reach-card-type">Alliance</span></span>
+          <span class="reach-card-content"><span class="reach-card-eyebrow">Strategic alliance</span><strong>London</strong><span class="reach-card-description">Business network relationships</span></span>
+        </a>
+
+        <a class="reach-card reach-card-static" href="#contact" data-animate="fade-up">
+          <img class="reach-card-poster" src="./images/reach/ksa.webp" alt="" loading="lazy" decoding="async">
+          <span class="reach-card-shade"></span>
+          <span class="reach-card-top"><span>04 / Saudi Arabia</span><span class="reach-card-type">Project network</span></span>
+          <span class="reach-card-content"><span class="reach-card-eyebrow">Project relationships</span><strong>Riyadh</strong><span class="reach-card-description">Infrastructure &amp; engineering collaboration</span></span>
+        </a>
+
+        <a class="reach-card reach-card-static" href="#contact" data-animate="fade-up" data-delay="100">
+          <img class="reach-card-poster" src="./images/reach/hong-kong.webp" alt="" loading="lazy" decoding="async">
+          <span class="reach-card-shade"></span>
+          <span class="reach-card-top"><span>05 / Hong Kong</span><span class="reach-card-type">Trade network</span></span>
+          <span class="reach-card-content"><span class="reach-card-eyebrow">Trading relationships</span><strong>Hong Kong</strong><span class="reach-card-description">Trading &amp; procurement connections</span></span>
+        </a>
+
+        <a class="reach-card reach-card-static" href="#contact" data-animate="fade-up" data-delay="150">
+          <img class="reach-card-poster" src="./images/reach/singapore.webp" alt="" loading="lazy" decoding="async">
+          <span class="reach-card-shade"></span>
+          <span class="reach-card-top"><span>06 / Singapore</span><span class="reach-card-type">Market network</span></span>
+          <span class="reach-card-content"><span class="reach-card-eyebrow">Commodities</span><strong>Singapore</strong><span class="reach-card-description">Commodities market relationships</span></span>
+        </a>
+      </div>
+
+      <p class="reach-clarifier"><span aria-hidden="true">?</span> India is our headquarters. The other locations represent group or business-network market relationships, not CBGIPL-owned offices or facilities.</p>
     </div>
   </section>
 
