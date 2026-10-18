@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initSmoothScroll();
   initRoadmapAnimation();
-  initLeadershipTilt(); // Added initLeadershipTilt
-  // initFaqAccordion(); // Added initFaqAccordion - assuming this was intended to be added as well
+  initLeadershipTilt();
+  initHeroVideo();
 
   // Initialize Lucide icons
   if (window.lucide) {
@@ -31,19 +31,52 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+/* ── HERO VIDEO BUFFERING & SEAMLESS PLAYBACK ── */
 function initHeroVideo() {
   const video = document.getElementById('heroVideo');
+  const poster = document.getElementById('heroPosterLayer');
   if (!video) return;
 
-  const playWhenReady = () => {
-    if (video.paused) video.play().catch(() => {});
-  };
+  let hasStarted = false;
 
-  video.addEventListener('canplay', playWhenReady);
+  function startPlayback() {
+    if (hasStarted) return;
+    hasStarted = true;
+
+    video.play().then(() => {
+      video.style.opacity = '1';
+      if (poster) {
+        setTimeout(() => {
+          poster.style.opacity = '0';
+        }, 600);
+      }
+    }).catch(() => {
+      // If autoplay policy blocks, show video at current frame
+      video.style.opacity = '1';
+    });
+  }
+
+  // Only start playing when the browser has buffered enough to play continuously
+  if (video.readyState >= 3) {
+    startPlayback();
+  } else {
+    video.addEventListener('canplaythrough', startPlayback, { once: true });
+    video.addEventListener('canplay', startPlayback, { once: true });
+    video.addEventListener('loadeddata', () => {
+      if (video.readyState >= 3) startPlayback();
+    }, { once: true });
+  }
+
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) playWhenReady();
+    if (!document.hidden && hasStarted && video.paused) {
+      video.play().catch(() => {});
+    }
   });
-  playWhenReady();
+
+  // Safety timeout: ensure playback begins even on slow connections
+  setTimeout(() => {
+    if (!hasStarted) startPlayback();
+  }, 4000);
 }
 
 /* ── PRELOADER ── */
