@@ -7,6 +7,9 @@ export default defineConfig({
   base: './',
   plugins: [viteSingleFile()],
   build: {
+    // Keep the public directory available in dev, but publish only assets
+    // referenced by the built page (copied by the post-build script).
+    copyPublicDir: false,
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),

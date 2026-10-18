@@ -2837,7 +2837,8 @@ select {
     top: 120px !important;
     left: 0 !important;
     width: 100% !important;
-    height: calc(100vw * 9 / 16) !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
     background-size: contain !important;
   }
   .mobile-video-caption {
