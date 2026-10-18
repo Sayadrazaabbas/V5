@@ -31,3 +31,5 @@ image_catalog.txt
 team_mapping.txt
 images_cbgholding/
 extracted_images/
+*.mp3
+*.pptx
