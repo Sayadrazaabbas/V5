@@ -88,6 +88,18 @@ function initPreloader() {
     if (progressFill) progressFill.style.width = `${percent}%`;
     if (percentText) percentText.textContent = `${percent}%`;
 
+    // Update Market Value Ticker (Dollar and Increasing Growth Rate)
+    const marketVal = document.getElementById('marketValue');
+    const marketGro = document.getElementById('marketGrowth');
+    if (marketVal && marketGro) {
+      const startVal = 0;
+      const endVal = 48.8;
+      const currentVal = (startVal + (endVal - startVal) * progress).toFixed(1);
+      const growth = currentVal > 0 ? Math.round(((currentVal - 1.25) / 1.25) * 100) : 0;
+      marketVal.textContent = `$${currentVal}B`;
+      marketGro.textContent = (growth >= 0 ? '+' : '') + growth + '%';
+    }
+
     if (progress < 1) {
       requestAnimationFrame(updateSmoothProgress);
     } else {
