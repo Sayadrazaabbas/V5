@@ -1,6 +1,17 @@
 // Rebuild the V5 hero montage from the existing real-estate film and
 // illustrative images supplied in the corporate business profile, synchronized
 // with every spoken keyword, charming original audio tune, and 200%+ volume.
+// Restructured order:
+// 1. Intro 3D Animation (CBG IPL — Carter Brown Global Infra Private Limited. Building the Foundations for the Future.)
+// 2. Powering Industries & Shaping Sustainable Tomorrow (Modern Skyline & Growth)
+// 3. Oil & Gas
+// 4. Fertilizers & Chemicals
+// 5. Metals & Minerals
+// 6. International Trading & Maritime Cargo Port
+// 7. Infrastructure & Supply Chains
+// 8. Green & Renewable Energy
+// 9. Global Network & Opportunities Across The World (Grand Final Ending)
+//
 // Usage: node scripts/render-hero-profile.cjs [ffmpeg.exe] [output.mp4]
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
@@ -27,48 +38,69 @@ function still(input, crop, label, title, name, bandOpacity, duration) {
     `setsar=1,format=yuv420p,${caption(label, title, bandOpacity)},fps=24,settb=1/24[${name}]`;
 }
 
-// Scene Durations synchronized with every keyword:
+// Scene Durations synchronized with every dialogue:
+// d0 (Intro 3D): 8.0s
+// d1 (Powering Industries): 6.8s
+// d2 (Oil & Gas): 2.5s
+// d3 (Fertilizers & Chemicals): 2.9s
+// d4 (Metals & Minerals): 2.7s
+// d5 (Imports & Exports): 6.6s
+// d6 (Infrastructure & Supply Chains): 8.3s
+// d7 (Green Energy): 8.2s
+// d8 (Grand Final Ending: Global Opportunities Across The World): 8.8s
 const d0 = 8.0;
-const d1 = 8.9;
-const d2 = 3.2;
-const d3 = 3.2;
-const d4 = 6.9;
-const d5 = 8.4;
-const d6 = 8.4;
-const d7 = 8.8;
-const d8 = 14.2;
+const d1 = 6.8;
+const d2 = 2.5;
+const d3 = 2.9;
+const d4 = 2.7;
+const d5 = 6.6;
+const d6 = 8.3;
+const d7 = 8.2;
+const d8 = 8.8;
 const trans = 0.4;
 
 const off1 = d0 - trans;               // 7.6
-const off2 = off1 + d1 - trans;        // 16.1
-const off3 = off2 + d2 - trans;        // 18.9
-const off4 = off3 + d3 - trans;        // 21.7
-const off5 = off4 + d4 - trans;        // 28.2
-const off6 = off5 + d5 - trans;        // 36.2
-const off7 = off6 + d6 - trans;        // 44.2
-const off8 = off7 + d7 - trans;        // 52.6
-const totalDur = off8 + d8;            // 66.8s
+const off2 = off1 + d1 - trans;        // 14.0
+const off3 = off2 + d2 - trans;        // 16.1
+const off4 = off3 + d3 - trans;        // 18.6
+const off5 = off4 + d4 - trans;        // 20.9
+const off6 = off5 + d5 - trans;        // 27.1
+const off7 = off6 + d6 - trans;        // 35.0
+const off8 = off7 + d7 - trans;        // 42.8
+const totalDur = off8 + d8;            // 51.6s ~ 54.0s (full coverage of master audio)
 
 const filters = [
+  // Scene 0: Authentic 3D Architectural intro
   `[0:v]trim=duration=${d0},setpts=PTS-STARTPTS,fps=24,scale=1280:720,setsar=1,format=yuv420p,` +
     `drawbox=x=395:y=400:w=490:h=42:color=0x071426@0.94:t=fill:enable='gte(t,3.5)',` +
     `drawtext=fontfile='${font}':text='Carter Brown Global Infra Private Limited':fontcolor=white:fontsize=22:x=(w-text_w)/2:y=408:enable='gte(t,3.5)',` +
     'settb=1/24[v0]',
-  still(1, '', 'ENERGY TRADE', 'OIL & GAS', 'v1', 0.75, d1),
-  still(2, 'crop=648:365:390:0,', 'ESSENTIAL INPUTS', 'FERTILIZERS & CHEMICALS', 'v2', 0.96, d2),
-  still(3, '', 'GLOBAL COMMODITIES', 'METALS & MINERALS', 'v3', 0.75, d3),
-  still(4, '', 'GLOBAL TRADE', 'IMPORTS & EXPORTS', 'v4', 0.75, d4),
-  still(5, '', 'INFRASTRUCTURE & EPC', 'GLOBAL SUPPLY CHAINS', 'v5', 0.75, d5),
-  still(6, '', 'SUSTAINABLE FUTURE', 'GREEN & RENEWABLE ENERGY', 'v6', 0.75, d6),
-  still(7, '', 'CROSS-BORDER NETWORK', 'STRATEGIC PARTNERSHIPS', 'v7', 0.75, d7),
-  `[0:v]trim=start=0:duration=${d8},setpts=PTS-STARTPTS,fps=24,scale=1280:720,setsar=1,format=yuv420p,` +
-    `drawbox=x=0:y=490:w=1280:h=230:color=0x071426@0.88:t=fill,` +
-    `drawbox=x=590:y=530:w=100:h=4:color=0xD4AF37:t=fill,` +
-    `drawtext=fontfile='${font}':text='CBG IPL':fontcolor=0xD4AF37:fontsize=26:x=(w-text_w)/2:y=545,` +
-    `drawtext=fontfile='${font}':text='Carter Brown Global Infra Private Limited':fontcolor=white:fontsize=32:x=(w-text_w)/2:y=580,` +
-    `drawtext=fontfile='${font}':text='Global Connections • Sustainable Vision • Limitless Possibilities':fontcolor=0xD4AF37:fontsize=18:x=(w-text_w)/2:y=625,` +
-    `drawtext=fontfile='${font}':text='Building Today. Powering Tomorrow.':fontcolor=white:fontsize=20:x=(w-text_w)/2:y=655,` +
-    'settb=1/24[v8]',
+  
+  // Scene 1: Powering Industries, Connecting Nations, Shaping a Sustainable Tomorrow
+  still(1, '', 'POWERING INDUSTRIES', 'SHAPING A SUSTAINABLE TOMORROW', 'v1', 0.85, d1),
+  
+  // Scene 2: Oil & Gas
+  still(2, '', 'ENERGY TRADE', 'OIL & GAS', 'v2', 0.75, d2),
+  
+  // Scene 3: Fertilizers & Chemicals
+  still(3, 'crop=648:365:390:0,', 'ESSENTIAL INPUTS', 'FERTILIZERS & CHEMICALS', 'v3', 0.96, d3),
+  
+  // Scene 4: Metals & Minerals
+  still(4, '', 'GLOBAL COMMODITIES', 'METALS & MINERALS', 'v4', 0.75, d4),
+  
+  // Scene 5: International Trading, Imports & Exports
+  still(5, '', 'GLOBAL TRADE', 'IMPORTS & EXPORTS', 'v5', 0.75, d5),
+  
+  // Scene 6: Infrastructure & EPC, Supply Chains
+  still(6, '', 'INFRASTRUCTURE & EPC', 'GLOBAL SUPPLY CHAINS', 'v6', 0.75, d6),
+  
+  // Scene 7: Green Energy & Renewable Energy
+  still(7, '', 'SUSTAINABLE FUTURE', 'GREEN & RENEWABLE ENERGY', 'v7', 0.75, d7),
+  
+  // Scene 8 (Final Scene): Connecting Opportunities Across The World
+  still(8, '', 'CROSS-BORDER NETWORK', 'OPPORTUNITIES ACROSS THE WORLD', 'v8', 0.85, d8),
+
+  // Crossfade transitions
   `[v0][v1]xfade=transition=fade:duration=${trans}:offset=${off1}[x1]`,
   `[x1][v2]xfade=transition=fade:duration=${trans}:offset=${off2}[x2]`,
   `[x2][v3]xfade=transition=fade:duration=${trans}:offset=${off3}[x3]`,
@@ -81,17 +113,18 @@ const filters = [
 
 const args = [
   '-y', '-hide_banner', '-loglevel', 'warning', '-stats',
-  '-stream_loop', '3', '-i', source('public/videos/Real_Estate_Animation_for_CBGIPL.mp4'),
-  '-loop', '1', '-framerate', '24', '-t', String(d1), '-i', source('src/media/hero/energy.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d2), '-i', source('src/media/hero/fertilizers.png'),
-  '-loop', '1', '-framerate', '24', '-t', String(d3), '-i', source('src/media/hero/metals.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d4), '-i', source('src/media/hero/global-trade.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d5), '-i', source('extracted_pptx_media/image15.png'),
-  '-loop', '1', '-framerate', '24', '-t', String(d6), '-i', source('src/media/hero/green-energy.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d7), '-i', source('extracted_pptx_media/image3.jpg'),
+  '-i', source('public/videos/Real_Estate_Animation_for_CBGIPL.mp4'),
+  '-loop', '1', '-framerate', '24', '-t', String(d1), '-i', source('src/media/hero/powering-industries.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d2), '-i', source('src/media/hero/energy.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d3), '-i', source('src/media/hero/fertilizers.png'),
+  '-loop', '1', '-framerate', '24', '-t', String(d4), '-i', source('src/media/hero/metals.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d5), '-i', source('src/media/hero/global-trade.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d6), '-i', source('src/media/hero/infrastructure.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d7), '-i', source('src/media/hero/green-energy.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d8), '-i', source('src/media/hero/global-network.jpg'),
   '-i', source('src/media/hero/hero-narration.m4a'),
   '-filter_complex', filters,
-  '-map', '[video]', '-map', '8:a:0',
+  '-map', '[video]', '-map', '9:a:0',
   '-t', String(totalDur),
   '-c:v', 'libx264', '-preset', 'slow', '-crf', '27',
   '-s:v', '960x540', '-pix_fmt', 'yuv420p', '-r', '24',
