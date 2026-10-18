@@ -3,12 +3,12 @@
 // enhanced energetic background music, bold tempo, and 200%+ volume.
 // Restructured order:
 // 1. Intro 3D Animation (CBG IPL — Carter Brown Global Infra Private Limited. Building the Foundations for the Future.)
-// 2. Powering Industries & Shaping Sustainable Tomorrow (Modern Skyline & Growth)
+// 2. Powering Industries & Shaping a Sustainable Tomorrow (Newly generated modern eco-smart city & sustainable energy skyline)
 // 3. Oil & Gas
 // 4. Fertilizers & Chemicals
 // 5. Metals & Minerals
 // 6. International Trading & Maritime Cargo Port
-// 7. Infrastructure & Supply Chains
+// 7. Global Supply Chains (Newly generated intermodal routes: vessel, freight rail, logistics trucks, air cargo)
 // 8. Green & Renewable Energy
 // 9. Global Network & Opportunities Across The World (Grand Final Ending)
 //
@@ -40,12 +40,12 @@ function still(input, crop, label, title, name, bandOpacity, duration) {
 
 // Calibrated Scene Durations synchronized with energetic dialogs:
 // d0 (Intro 3D): 8.0s
-// d1 (Powering Industries): 6.5s
+// d1 (Powering Industries & Shaping Sustainable Tomorrow): 6.5s
 // d2 (Oil & Gas): 2.4s
 // d3 (Fertilizers & Chemicals): 2.8s
 // d4 (Metals & Minerals): 2.6s
 // d5 (Imports & Exports): 6.4s
-// d6 (Infrastructure & Supply Chains): 8.0s
+// d6 (Global Supply Chains & Infrastructure): 8.0s
 // d7 (Green Energy): 7.9s
 // d8 (Grand Final Ending: Global Opportunities Across The World): 8.4s
 const d0 = 8.0;
@@ -76,7 +76,7 @@ const filters = [
     `drawtext=fontfile='${font}':text='Carter Brown Global Infra Private Limited':fontcolor=white:fontsize=22:x=(w-text_w)/2:y=408:enable='gte(t,3.5)',` +
     'settb=1/24[v0]',
   
-  // Scene 1: Powering Industries, Connecting Nations, Shaping a Sustainable Tomorrow
+  // Scene 1: Powering Industries, Connecting Nations, Shaping a Sustainable Tomorrow (Newly generated)
   still(1, '', 'POWERING INDUSTRIES', 'SHAPING A SUSTAINABLE TOMORROW', 'v1', 0.85, d1),
   
   // Scene 2: Oil & Gas
@@ -91,8 +91,8 @@ const filters = [
   // Scene 5: International Trading, Imports & Exports
   still(5, '', 'GLOBAL TRADE', 'IMPORTS & EXPORTS', 'v5', 0.75, d5),
   
-  // Scene 6: Infrastructure & EPC, Supply Chains
-  still(6, '', 'INFRASTRUCTURE & EPC', 'GLOBAL SUPPLY CHAINS', 'v6', 0.75, d6),
+  // Scene 6: Global Supply Chains & Infrastructure (Newly generated intermodal transport)
+  still(6, '', 'INFRASTRUCTURE & EPC', 'GLOBAL SUPPLY CHAINS', 'v6', 0.85, d6),
   
   // Scene 7: Green Energy & Renewable Energy
   still(7, '', 'SUSTAINABLE FUTURE', 'GREEN & RENEWABLE ENERGY', 'v7', 0.75, d7),
@@ -114,12 +114,12 @@ const filters = [
 const args = [
   '-y', '-hide_banner', '-loglevel', 'warning', '-stats',
   '-i', source('public/videos/Real_Estate_Animation_for_CBGIPL.mp4'),
-  '-loop', '1', '-framerate', '24', '-t', String(d1), '-i', source('src/media/hero/powering-industries.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d1), '-i', source('src/media/hero/sustainable-tomorrow.jpg'),
   '-loop', '1', '-framerate', '24', '-t', String(d2), '-i', source('src/media/hero/energy.jpg'),
   '-loop', '1', '-framerate', '24', '-t', String(d3), '-i', source('src/media/hero/fertilizers.png'),
   '-loop', '1', '-framerate', '24', '-t', String(d4), '-i', source('src/media/hero/metals.jpg'),
   '-loop', '1', '-framerate', '24', '-t', String(d5), '-i', source('src/media/hero/global-trade.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d6), '-i', source('src/media/hero/infrastructure.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d6), '-i', source('src/media/hero/global-supply-chains.jpg'),
   '-loop', '1', '-framerate', '24', '-t', String(d7), '-i', source('src/media/hero/green-energy.jpg'),
   '-loop', '1', '-framerate', '24', '-t', String(d8), '-i', source('src/media/hero/global-network.jpg'),
   '-i', source('src/media/hero/hero-narration.m4a'),
