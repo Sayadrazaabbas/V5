@@ -96,22 +96,12 @@
       <source src="https://github.com/Sayadrazaabbas/V5/releases/download/v1.0-media/hero-bg.mp4" type="video/mp4">
       <source src="./videos/hero-bg.mp4" type="video/mp4">
     </video>
-    <div class="mobile-video-caption" aria-hidden="true">
-      <span id="mobileVideoLabel">Carter Brown Global Infra Private Limited</span>
-      <strong id="mobileVideoTitle">Infrastructure + Global Trade</strong>
-    </div>
-
     <!-- Sound Toggle Button for Browser Autoplay Policy -->
     <button id="soundToggleBtn"
       onclick="var v = document.getElementById('heroVideo'); v.muted = !v.muted; v.play().catch(function() {}); this.innerHTML = v.muted ? '🔇 Unmute Video' : '🔊 Mute Video';"
-      style="position: absolute; bottom: 30px; right: 40px; z-index: 20; padding: 10px 20px; background: rgba(10, 22, 40, 0.7); backdrop-filter: blur(5px); color: var(--gold); border: 1px solid rgba(200, 163, 95, 0.5); border-radius: 50px; cursor: pointer; font-family: var(--font-accent); font-size: 0.9rem; transition: all 0.3s ease;">
+      style="position: absolute; bottom: 30px; right: 40px; z-index: 20; padding: 8px 18px; background: transparent; color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.5); border-radius: 50px; cursor: pointer; font-family: var(--font-accent); font-size: 0.85rem; transition: all 0.3s ease; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
       🔇 Unmute Video
     </button>
-
-    <!-- Decorative overlay with NO darkening filter, just subtle corner gradients -->
-    <div
-      style="position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(200, 163, 95, 0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(27, 94, 58, 0.06) 0%, transparent 50%); pointer-events: none;">
-    </div>
 
     <div class="hero-scroll-indicator"
       style="position: absolute; bottom: 20px; left: 40px; z-index: 10;">

@@ -38,30 +38,6 @@ function initHeroVideo() {
   const poster = document.getElementById('heroPosterLayer');
   if (!video) return;
 
-  // The original film stays intact. This readable companion follows its
-  // existing scene timings when the full frame is shown on narrow screens.
-  const label = document.getElementById('mobileVideoLabel');
-  const title = document.getElementById('mobileVideoTitle');
-  const scenes = [
-    [0, 'Carter Brown Global Infra Private Limited', 'Infrastructure + Global Trade'],
-    [7.8, 'Energy Trade', 'Oil & Gas'],
-    [16.3, 'Essential Inputs', 'Fertilizers & Chemicals'],
-    [19.1, 'Global Commodities', 'Metals & Minerals'],
-    [21.9, 'Global Trade', 'Imports & Exports'],
-    [28.4, 'Infrastructure & EPC', 'Global Supply Chains'],
-    [36.4, 'Sustainable Future', 'Green & Renewable Energy'],
-    [44.4, 'Cross-Border Network', 'Strategic Partnerships'],
-    [52.8, 'CBGIPL', 'Building Today. Powering Tomorrow.'],
-  ];
-  const updateCaption = () => {
-    if (!label || !title) return;
-    const scene = [...scenes].reverse().find(([time]) => video.currentTime >= time) || scenes[0];
-    if (label.textContent !== scene[1]) label.textContent = scene[1];
-    if (title.textContent !== scene[2]) title.textContent = scene[2];
-  };
-  video.addEventListener('timeupdate', updateCaption);
-  video.addEventListener('seeked', updateCaption);
-  updateCaption();
 
   let hasStarted = false;
 
