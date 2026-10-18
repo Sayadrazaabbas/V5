@@ -4,9 +4,9 @@
 // Restructured order:
 // 1. Intro 3D Animation (CBG IPL — Carter Brown Global Infra Private Limited. Building the Foundations for the Future.)
 // 2. Powering Industries & Shaping a Sustainable Tomorrow (Newly generated modern eco-smart city & sustainable energy skyline)
-// 3. Oil & Gas
-// 4. Fertilizers & Chemicals
-// 5. Metals & Minerals
+// 3. Oil & Gas (Newly generated modern deepwater drilling & LNG facility at sunset)
+// 4. Fertilizers & Chemicals (Newly generated agro-chemical production plant & green crop fields)
+// 5. Metals & Minerals (Newly generated high-tech metallurgy facility with steel coils & refined minerals)
 // 6. International Trading & Maritime Cargo Port
 // 7. Global Supply Chains (Newly generated intermodal routes: vessel, freight rail, logistics trucks, air cargo)
 // 8. Green & Renewable Energy
@@ -76,22 +76,22 @@ const filters = [
     `drawtext=fontfile='${font}':text='Carter Brown Global Infra Private Limited':fontcolor=white:fontsize=22:x=(w-text_w)/2:y=408:enable='gte(t,3.5)',` +
     'settb=1/24[v0]',
   
-  // Scene 1: Powering Industries, Connecting Nations, Shaping a Sustainable Tomorrow (Newly generated)
+  // Scene 1: Powering Industries, Connecting Nations, Shaping a Sustainable Tomorrow
   still(1, '', 'POWERING INDUSTRIES', 'SHAPING A SUSTAINABLE TOMORROW', 'v1', 0.85, d1),
   
-  // Scene 2: Oil & Gas
-  still(2, '', 'ENERGY TRADE', 'OIL & GAS', 'v2', 0.75, d2),
+  // Scene 2: Oil & Gas (Newly generated offshore platform & LNG facility)
+  still(2, '', 'ENERGY TRADE', 'OIL & GAS', 'v2', 0.85, d2),
   
-  // Scene 3: Fertilizers & Chemicals
-  still(3, 'crop=648:365:390:0,', 'ESSENTIAL INPUTS', 'FERTILIZERS & CHEMICALS', 'v3', 0.96, d3),
+  // Scene 3: Fertilizers & Chemicals (Newly generated agro-chemical & green crops)
+  still(3, '', 'ESSENTIAL INPUTS', 'FERTILIZERS & CHEMICALS', 'v3', 0.85, d3),
   
-  // Scene 4: Metals & Minerals
-  still(4, '', 'GLOBAL COMMODITIES', 'METALS & MINERALS', 'v4', 0.75, d4),
+  // Scene 4: Metals & Minerals (Newly generated high-tech metallurgy & refined minerals)
+  still(4, '', 'GLOBAL COMMODITIES', 'METALS & MINERALS', 'v4', 0.85, d4),
   
   // Scene 5: International Trading, Imports & Exports
   still(5, '', 'GLOBAL TRADE', 'IMPORTS & EXPORTS', 'v5', 0.75, d5),
   
-  // Scene 6: Global Supply Chains & Infrastructure (Newly generated intermodal transport)
+  // Scene 6: Global Supply Chains & Infrastructure (Intermodal transport routes)
   still(6, '', 'INFRASTRUCTURE & EPC', 'GLOBAL SUPPLY CHAINS', 'v6', 0.85, d6),
   
   // Scene 7: Green Energy & Renewable Energy
@@ -115,9 +115,9 @@ const args = [
   '-y', '-hide_banner', '-loglevel', 'warning', '-stats',
   '-i', source('public/videos/Real_Estate_Animation_for_CBGIPL.mp4'),
   '-loop', '1', '-framerate', '24', '-t', String(d1), '-i', source('src/media/hero/sustainable-tomorrow.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d2), '-i', source('src/media/hero/energy.jpg'),
-  '-loop', '1', '-framerate', '24', '-t', String(d3), '-i', source('src/media/hero/fertilizers.png'),
-  '-loop', '1', '-framerate', '24', '-t', String(d4), '-i', source('src/media/hero/metals.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d2), '-i', source('src/media/hero/energy-new.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d3), '-i', source('src/media/hero/fertilizers-new.jpg'),
+  '-loop', '1', '-framerate', '24', '-t', String(d4), '-i', source('src/media/hero/metals-new.jpg'),
   '-loop', '1', '-framerate', '24', '-t', String(d5), '-i', source('src/media/hero/global-trade.jpg'),
   '-loop', '1', '-framerate', '24', '-t', String(d6), '-i', source('src/media/hero/global-supply-chains.jpg'),
   '-loop', '1', '-framerate', '24', '-t', String(d7), '-i', source('src/media/hero/green-energy.jpg'),
