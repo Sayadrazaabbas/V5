@@ -1737,7 +1737,8 @@ select {
   margin-top: 15px;
 }
 
-.banking-leader-card .leader-info p {
+.banking-leader-card .leader-info p,
+.detailed-leader-card .leader-info p {
   font-size: .75rem;
   line-height: 1.35;
 }
@@ -1747,7 +1748,9 @@ select {
 }
 
 .banking-leader-card .leader-info,
-.banking-leader-card:hover .leader-info {
+.banking-leader-card:hover .leader-info,
+.detailed-leader-card .leader-info,
+.detailed-leader-card:hover .leader-info {
   padding-top: 20px;
 }
 
